@@ -1,0 +1,27 @@
+[package]
+name = "deluge"
+version = "0.1.0"
+authors = ["Erik Svensson <erik.public@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+nrf52840-pac = { git = "https://github.com/nrf-rs/nrf52840-pac.git" }
+nrf52840-hal = { git = "https://github.com/nrf-rs/nrf-hal.git" }
+cortex-m = "0.6"
+cortex-m-rt = "0.6"
+panic-rtt-target = { version = "0.1", features = ["cortex-m"] }
+cortex-m-rtic = "0.5"
+rtt-target = { version = "0.2", features = ["cortex-m"] }
+ufmt = "0.1.0"
+arrayvec = { version = "0.5.1", default-features = false }
+display-interface = "0.4"
+display-interface-spi = "0.4"
+embedded-graphics = "0.6.2"
+st7789 = "0.5.0"
+profont = "0.4.0"
+
+[dependencies.embedded-hal]
+features = ["unproven"]
+version = "0.2.3"
